@@ -5,7 +5,7 @@ if [ $# -ne 2 ]; then
     exit 1
 fi
 
-dir_name=$(dirname "$FILE_PATH")
+dir_name=$(dirname "$1")
 if [ ! -d "$dir_name" ]; then
     mkdir -p "$dir_name"
 fi
