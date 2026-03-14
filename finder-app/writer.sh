@@ -5,6 +5,11 @@ if [ $# -ne 2 ]; then
     exit 1
 fi
 
+dir_name=$(dirname "$FILE_PATH")
+if [ ! -d "$dir_name" ]; then
+    mkdir -p "$dir_name"
+fi
+
 touch "$1" || {
   echo "file could not be created"
   exit 1
