@@ -9,4 +9,4 @@ $(TARGET): writer.c
 	$(CC) $(CFLAGS) -o writer writer.c
 
 clean:
-	rm $(TARGET)
+	rm ./$(TARGET)
